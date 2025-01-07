@@ -1,0 +1,50 @@
+
+const devConfig = {
+  production: false,
+  sso: {
+    authority: 'https://id.becoxy.com/auth/realms/saas',
+    client_id: 'cms-web',
+    client_secret: 'ZYnGZdF1Q8dCElXTA5ekfo9A0w3tHDfM',
+    redirect_uri: 'http://localhost:3000/callback',
+    post_logout_redirect_uri: 'http://localhost:3000',
+    response_type: 'code',
+    scope: 'openid profile offline_access',
+    silent_redirect_uri: 'http://localhost:3000/silent',
+    revokeAccessTokenOnSignout: true
+  }
+}
+const stagingConfig = {
+  production: true,
+  sso: {
+    authority: 'https://id.becoxy.com/auth/realms/saas',
+    client_id: 'cms-web',
+    client_secret: 'vc2joNFuybZMwQgMtyd5hjnBV4zrwmQo',
+    redirect_uri: 'http://localhost/callback',
+    post_logout_redirect_uri: 'http://localhost',
+    response_type: 'code',
+    scope: 'openid profile offline_access',
+    silent_redirect_uri: 'http://localhost/silent',
+    revokeAccessTokenOnSignout: true
+  }
+}
+const prodConfig = {
+  production: true,
+  sso: {
+    authority: 'https://id.becoxy.com/auth/realms/saas',
+    client_id: 'janbox-web',
+    client_secret: 'vc2joNFuybZMwQgMtyd5hjnBV4zrwmQo',
+    redirect_uri: 'http://192.168.137.51:8050/callback',
+    post_logout_redirect_uri: 'http://192.168.137.51:8050',
+    response_type: 'code',
+    scope: 'openid profile offline_access',
+    silent_redirect_uri: 'http://192.168.137.51:8050/silent',
+    revokeAccessTokenOnSignout: true
+  }
+}
+
+// prettier-ignore
+const masterConfig = process.env.REACT_APP_ENV === 'production' ? prodConfig : process.env.REACT_APP_ENV === 'staging' ? stagingConfig : devConfig
+
+export default {
+  ...masterConfig
+}

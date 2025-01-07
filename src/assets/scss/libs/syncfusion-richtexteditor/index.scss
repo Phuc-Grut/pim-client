@@ -1,0 +1,79 @@
+
+@import "src/@core/scss/base/bootstrap-extended/include"; // Bootstrap includes
+
+@import "src/@core/scss/base/components/include"; // Components includes
+
+// Import first main menu mixin
+@import "src/@core/scss/base/core/mixins/main-menu-mixin";
+
+.e-richtexteditor .e-rte-toolbar{
+  border: none;
+  .e-rte-dropdown-btn-text{
+
+  }
+}
+.e-control.e-richtexteditor{
+  overflow: hidden;
+}
+
+.e-richtexteditor{
+
+  .e-toolbar {
+    background: none;
+    .e-tbar-btn{
+      background: none;
+    }
+    .e-toolbar-items .e-toolbar-item.e-overlay{
+      background: none;
+    }
+  }
+  .e-toolbar-pop.e-toolbar-extended.e-control.e-popup.e-popup-open{
+    z-index: 99 !important;
+  }
+
+  &.editor-tab {
+    .e-toolbar-wrapper{
+      min-height: 45px;
+      //height: auto !important;
+    }
+    .e-rte-content{
+      height: calc(100% - 40px) !important;
+      border-bottom: 0;
+    }
+  }
+}
+
+
+.dark-layout{
+
+  .e-richtexteditor .e-rte-content, .e-richtexteditor .e-source-content{
+    background: $theme-dark-card-bg;
+    color: $theme-dark-label-color;
+  }
+  .e-richtexteditor{
+
+  }
+  //.e-richtexteditor:not(.e-rte-toolbar-enabled){
+  //  border: 1px solid $theme-dark-border-color;
+  //}
+
+  .e-richtexteditor{
+    border: 1px solid $theme-dark-border-color;
+
+  }
+  .e-rte-quick-popup .e-rte-quick-toolbar .e-toolbar-items .e-tbar-btn{
+    background: none;
+  }
+  .e-richtexteditor .e-rte-toolbar .e-toolbar-item.e-overlay .e-tbar-btn .e-icons{
+    color: #EFF3FF;
+  }
+  //e-rte-toolbar e-control e-toolbar e-lib e-keyboard null e-extended-toolbar
+  .e-richtexteditor .e-rte-toolbar{
+    background: $theme-dark-card-bg;
+    border: none;
+    border-bottom: 1px solid $theme-dark-border-color;
+    .e-rte-dropdown-btn-text{
+      color: $theme-dark-label-color;
+    }
+  }
+}

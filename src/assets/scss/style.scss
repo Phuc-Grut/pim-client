@@ -1,0 +1,11 @@
+@import "libs/dashboard-layout/default.component";
+@import "variables/variables";
+@import '@styles/react/libs/input-number/input-number.scss';
+@import "libs/syncfution-grid/data-grid";
+@import "libs/synfution-datepicker/datepicker";
+@import "libs/syncfusion-richtexteditor/index";
+@import "libs/syncfusion-tabs/tabs";
+@import 'src/@core/scss/react/libs/react-select/_react-select.scss';
+@import "theme/theme";
+@import "theme/_dark-layout";
+@import "skin/skin";

@@ -1,0 +1,136 @@
+//.react-flow {
+//  height: 100vh !important;
+//  width: 100vw !important;
+//}
+.react-flow__edge-path {
+  stroke: #333;
+  stroke-width: 2;
+}
+
+.temp .react-flow__edge-path {
+  stroke: #bbb;
+  stroke-dasharray: 5 5;
+}
+
+.react-flow__panel{
+  //display: none !important;
+}
+.react-flow__panel.react-flow__attribution.bottom.right{
+  display: none !important;
+}
+// button edge
+
+.edgebutton {
+  width: 30px;
+  height: 30px;
+  background: #eee;
+  border: 1px solid #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.edgebutton:hover {
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.08);
+}
+
+
+.list-context-menu{
+  display: none;
+  &.open{
+    display: flex;
+  }
+  .menu-wrapper {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    .context-menu-item{
+      background: none !important;
+      color: #000000;
+      &:hover{
+        background: #babfc7 !important;
+      }
+    }
+  }
+}
+
+.e-signature{
+  border: none;
+  background: none;
+}
+
+.e-contextmenu-wrapper ul .e-menu-item .e-menu-icon, .e-contextmenu-container ul .e-menu-item .e-menu-icon{
+  color: #000;
+}
+.e-icons.e-transform:before{
+  //content: "\uF32F";
+}
+.react-flow{
+  .custom-node, .shape-node{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.node-circle{
+      border-radius: 100%;
+    }
+  }
+  .react-flow__node{
+    &:not(:hover){
+      .custom-handle{
+        opacity: 0;
+      }
+    }
+
+    &.selected{
+      .custom-node{
+        border: 1px solid #555 !important;
+      }
+      .shape-node{
+        svg{
+          path{
+            stroke: #555 !important;
+            stroke-width: 2;
+          }
+        }
+      }
+
+      .custom-handle{
+        opacity: 1;
+      }
+    }
+    .custom-handle{
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+
+.dark-layout{
+  .react-flow{
+    .react-flow__node{
+      &:not(:hover){
+        .custom-handle{
+
+        }
+      }
+
+      &.selected{
+
+        .custom-handle{
+        }
+      }
+      .custom-handle{
+
+      }
+    }
+    .react-flow__background{
+      display: none !important;
+    }
+  }
+
+}

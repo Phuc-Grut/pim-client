@@ -1,0 +1,48 @@
+.custom-treeview.e-treeview .e-text-content .e-list-text {
+  font-family: "Montserrat", Helvetica, Arial, serif;;
+}
+
+.custom-treeview.e-treeview .e-list-item.e-active>.e-text-content .e-list-text {
+  color: #0e6fff !important;
+}
+
+.custom-treeview.e-treeview .e-list-item.e-hover>.e-text-content .e-list-text {
+  color: #0e6fff !important;
+}
+
+.custom-treeview.e-treeview .e-list-item.e-active>.e-fullrow {
+  background-color: rgb(235, 70, 25, 10%) !important;
+  border-color: rgb(235, 70, 25, 10%) !important;
+  color: #0e6fff !important;
+}
+
+.custom-treeview.e-treeview .e-list-item.e-hover>.e-fullrow {
+  background-color: rgb(235, 70, 25, 10%) !important;
+  border-color: rgb(235, 70, 25, 10%) !important;
+  color: #0e6fff !important;
+}
+
+.custom-treeview.e-treeview .e-fullrow {
+  border-radius: 3px;
+}
+
+.custom-treeview.e-treeview .e-list-item {
+  padding: 2px 0;
+}
+
+.custom-treeview.e-treeview .e-list-item.e-active>.e-text-content .e-icon-collapsible {
+  color: #0e6fff !important;
+}
+
+.custom-treeview.e-treeview .e-list-item.e-hover>.e-text-content .e-icon-collapsible {
+  color: #0e6fff !important;
+}
+
+.custom-treeview.e-treeview .e-list-item.e-active>.e-text-content .e-icon-expandable {
+  color: #0e6fff !important;
+}
+
+.custom-treeview.e-treeview .e-list-item.e-hover>.e-text-content .e-icon-expandable {
+  color: #0e6fff !important;
+}
+

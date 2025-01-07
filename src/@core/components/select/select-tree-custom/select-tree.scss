@@ -1,0 +1,85 @@
+@import "src/@core/scss/base/bootstrap-extended/include";
+@import "src/@core/scss/base/components/include";
+@import "src/@core/scss/base/core/mixins/main-menu-mixin";
+@import "@assets-custom/scss/variables/variables";
+.select-tree.e-input-group:not(.e-float-icon-left) {
+  border: 1px solid #d8d6de !important;
+  border-radius: 4px !important;
+  padding: 0px 5px 0px 10px !important;
+  margin: 0px !important;
+  min-height: 28px !important;
+}
+.form-input-content{
+  .select-tree.e-input-group,
+  .e-input-group.e-control-wrapper {
+    margin: 0;
+    font-size: 14px !important;
+    color: #6e6b7b !important;
+    opacity: 0.9;
+    border-color: $border-color !important;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 0 8px;
+    .e-control.e-dropdowntree.e-lib.e-input{
+      padding: 0;
+    }
+    &.e-input-focus{
+      border-width: 1px !important;
+      border-radius: 4px;
+      padding: 0 8px;
+    }
+  }
+   .e-input-group .e-clear-icon, .e-input-group.e-control-wrapper .e-clear-icon{
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .e-input-group:not(.e-float-icon-left):not(.e-float-input)::before{
+    height: 0 !important;
+    background: none !important;
+  }
+
+  .e-input-group:not(.e-float-icon-left):not(.e-float-input)::after{
+    height: 0 !important;
+    background: none !important;
+  }
+}
+
+
+.select-tree.e-input-group input.e-input {
+  font-size: 14px !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  padding: 0px !important;
+}
+
+.select-tree.e-input-group:not(.e-float-icon-left):not(.e-float-input)::before,
+.e-input-group.e-control-wrapper:not(.e-float-icon-left):not(.e-float-input)::before {
+  background-color: $primary !important;
+  height: 1px;
+}
+
+.select-tree.e-input-group:not(.e-float-icon-left):not(.e-float-input)::after,
+.e-input-group.e-control-wrapper:not(.e-float-icon-left):not(.e-float-input)::after {
+  height: 1px;
+  background-color: $primary !important;
+}
+
+.e-treeview .e-list-item.e-hover>.e-text-content .e-list-text {
+  color: $primary !important;
+}
+
+.e-treeview .e-list-item.e-hover>.e-fullrow {
+  background-color: rgba($color: #0e6fff, $alpha: 0.12) !important;
+}
+
+.e-treeview .e-list-item.e-active>.e-fullrow {
+  background-color: $primary !important;
+}
+
+.e-treeview .e-list-item.e-active>.e-text-content .e-list-text {
+  color: #FFFFFF !important;
+}
+
+.select-tree.e-ddt.e-popup {
+  border-radius: 5px;
+  border: 1px solid $border-color !important;
+}

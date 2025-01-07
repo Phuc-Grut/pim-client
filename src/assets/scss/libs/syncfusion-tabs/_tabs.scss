@@ -1,0 +1,15 @@
+@import "src/@core/scss/base/bootstrap-extended/include"; // Bootstrap includes
+@import "src/@core/scss/base/components/include"; // Components includes
+
+// Import first main menu mixin
+@import "src/@core/scss/base/core/mixins/main-menu-mixin";
+
+// Import variable customize
+@import "./../../variables/variables";
+.e-control.e-tab{
+  font-family: "Montserrat", Helvetica, Arial, serif;
+}
+.e-tab .e-content .e-item{
+  color: $headings-color;
+  font-size: 1rem;
+}

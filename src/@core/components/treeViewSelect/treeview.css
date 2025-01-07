@@ -1,0 +1,29 @@
+.custom-treeview.e-treeview .e-list-item.e-active>.e-text-content .e-list-text {
+  color: #fff !important;
+}
+
+.custom-treeview.e-treeview .e-list-item.e-hover>.e-text-content .e-list-text {
+  color: #fff !important;
+}
+
+.custom-treeview.e-treeview .e-list-item.e-active>.e-fullrow {
+  background-color: #0e6fff !important;
+  border-color: #0e6fff !important;
+}
+
+.custom-treeview.e-treeview .e-list-item.e-hover>.e-fullrow {
+  background-color: #0e6fff !important;
+  border-color: #0e6fff !important;
+}
+
+.custom-treeview.e-treeview .e-fullrow {
+  border-radius: 5px;
+}
+
+.custom-treeview.e-treeview .e-list-item.e-active>.e-icon-collapsible {
+  color: #fff !important;
+}
+
+.custom-treeview.e-treeview .e-list-item.e-hover>.e-icon-expandable {
+  color: #fff !important;
+}

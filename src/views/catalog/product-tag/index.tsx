@@ -1,0 +1,100 @@
+import {Fragment, useEffect, useState} from 'react'
+import {Helmet} from "react-helmet"
+import { ProductTagContext } from './useContext'
+import Table from './table'
+import ModalComponent from './modal'
+import {useTranslation} from "react-i18next"
+import {ITypeModal} from "@src/domain/models"
+
+import {userAction, userSubject} from "@configs/acl/ability"
+import NotPermission from "@components/not-permission"
+import {useAbility} from "@casl/react"
+import {AbilityContext} from "@utils/context/Can"
+import ModalView, { IFieldView } from '@components/modal-view'
+import { statusObjColorDefault, statusObjDefault_Status } from '@src/domain/constants/constantSelect'
+import { Badge } from 'reactstrap'
+
+const BankPage = () => {
+  const { t } = useTranslation()
+
+  const ability = useAbility(AbilityContext)
+
+  const getWindowSize = () => {
+    const { innerWidth, innerHeight } = window
+    return { innerWidth, innerHeight }
+  }
+
+  const [windowSize, setWindowSize] = useState(getWindowSize())
+  const [openModal, setOpenModal] = useState(false)
+  const [dataItem, setDataItem] = useState<any>({})
+  const [typeModal, setTypeModal] = useState<ITypeModal>('')
+  const [openModalDetail, setOpenModalDetail] = useState(false)
+
+  const optionType: any = {
+    0: "Product brand",
+    1: "InfomationChannel",
+    2: "CategoryProduct",
+    3: "Product management"
+  }
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize(getWindowSize())
+    }
+    window.addEventListener('resize', handleWindowResize)
+    return () => {
+      window.removeEventListener('resize', handleWindowResize)
+    }
+  }, [])
+
+  const handleModal = () => {
+    setOpenModal(!openModal)
+  }
+  const handleModalDetail = () => {
+    setOpenModalDetail(!openModalDetail)
+  }
+
+  const renderFields: IFieldView[] = [
+    {
+      value: dataItem.name, label: "CategoryProductName"
+    },
+    {
+      value: t(optionType[dataItem.type]), label: "Type"
+    },
+    {
+      value: <Badge className='text-capitalize' color={statusObjColorDefault[dataItem.status]} pill>
+        {t(statusObjDefault_Status[dataItem.status])}
+      </Badge>,
+      label: "Status"
+    }
+  ]
+
+  return (
+    <Fragment>
+      <Helmet>
+        <title>{t('Catalog')} - {t('Product tag')}</title>
+      </Helmet>
+      {ability.can(userAction.OPEN, userSubject.ProductTag) ? (
+        <ProductTagContext.Provider value={{ openModal, handleModal, dataItem, setDataItem, typeModal, setTypeModal, windowSize, openModalDetail, handleModalDetail}} >
+          <div className='app-user-list'>
+            <Table />
+            <ModalComponent />
+            <ModalView
+              dataItem={dataItem}
+              renderFields={renderFields}
+              openModalDetail={openModalDetail}
+              windowSize={windowSize}
+              titleHeader='Product tag'
+              setDataItem={setDataItem}
+              handleModalDetail={handleModalDetail}
+            />
+          </div>
+        </ProductTagContext.Provider>
+      ) : (
+        <NotPermission />
+      )}
+      
+    </Fragment>
+  )
+}
+export default BankPage

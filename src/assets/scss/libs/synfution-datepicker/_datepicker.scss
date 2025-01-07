@@ -1,0 +1,68 @@
+@import "src/@core/scss/base/bootstrap-extended/include"; // Bootstrap includes
+@import "src/@core/scss/base/components/include"; // Components includes
+
+// Import first main menu mixin
+@import "src/@core/scss/base/core/mixins/main-menu-mixin";
+
+// Import variable customize
+@import "./../../variables/variables";
+
+.e-input-group.e-control-wrapper.e-date-wrapper{
+  font-family: "Montserrat", Helvetica, Arial, serif;
+  font-size: 1rem;
+  height: 28px;
+  margin-bottom: 0;
+  &.sync-datepicker{
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-color: hsl(0, 0%, 80%) !important;
+    border-radius: 4px;
+    &::before{
+      background: none !important;
+    }
+    &::after{
+      background: none !important;
+    }
+    .e-control.e-datepicker.e-input.e-keyboard{
+      padding: 2px 8px !important;
+    }
+    .e-input-group-icon:last-child{
+      margin-right: 8px !important;
+    }
+    &:focus{
+      border-color: $color-light-blue;
+    }
+    &.e-input-focus{
+      border-color: $color-light-blue !important;
+    }
+    &.is-invalid{
+      border-color: $danger !important;
+    }
+  }
+
+}
+
+
+// Dark Layout
+.dark-layout {
+  .e-input-group .e-input-group-icon, .e-input-group.e-control-wrapper {
+    .e-input-group-icon {
+      color: #fff;
+      &:hover{
+        color: $danger !important;
+      }
+    }
+  }
+  .e-input-group.e-control-wrapper.e-date-wrapper.sync-datepicker .e-control.e-datepicker.e-input.e-keyboard::placeholder{
+    color: #676d7d;
+  }
+  .e-input-group.e-control-wrapper.e-date-wrapper.sync-datepicker{
+    border-color: #404656 !important;
+  }
+  .e-input-group .e-clear-icon {
+    color: #fff !important;
+    &:hover{
+      color: $danger !important;
+    }
+  }
+}

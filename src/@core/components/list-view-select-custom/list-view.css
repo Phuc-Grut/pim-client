@@ -1,0 +1,35 @@
+.e-ul {
+  padding-left: 0 !important;
+}
+
+.e-active {
+  background-color: rgb(235, 70, 25, 10%) !important;
+  color: #0e6fff !important;
+  border-radius: 5px !important;
+}
+
+.e-level-1 .e-list-item :hover {
+  background-color: rgb(235, 70, 25, 10%) !important;
+  color: #0e6fff !important;
+  border-radius: 5px !important;
+}
+
+.icon-list-view {
+  background-color: transparent !important;
+  cursor: pointer;
+}
+
+.icon-list-view :hover {
+  color: #FFFFFF !important;
+}
+
+
+.e-level-1 div :hover {
+  background-color: transparent !important;
+  border-radius: 5px !important;
+}
+
+.e-level-1 {
+  cursor: pointer;
+  border-bottom: 1px solid #d8d6de !important;
+}

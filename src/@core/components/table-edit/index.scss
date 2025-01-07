@@ -1,0 +1,177 @@
+@import "src/@core/scss/base/bootstrap-extended/include"; // Bootstrap includes
+@import "src/@core/scss/base/components/include"; // Components includes
+
+// Import first main menu mixin
+@import "src/@core/scss/base/core/mixins/main-menu-mixin";
+
+// Import variable customize
+@import "../../../assets/scss/variables/variables";
+@import "./select-100.scss";
+@import "./select-200.scss";
+@import "./select-300.scss";
+@import "./select-400.scss";
+@import "./select-500.scss";
+
+.width-popup-500__menu-portal {
+  min-width: 500px !important;
+  z-index: 9999 !important;
+}
+
+.width-popup-400__menu-portal {
+  min-width: 400px !important;
+  z-index: 9999 !important;
+}
+
+.width-popup-300__menu-portal {
+  min-width: 300px !important;
+  z-index: 9999 !important;
+}
+
+.width-popup-200__menu-portal {
+  min-width: 200px !important;
+  z-index: 9999 !important;
+}
+
+.width-popup-100__menu-portal {
+  min-width: 100px !important;
+  z-index: 9999 !important;
+}
+
+.select__menu-portal {
+  z-index: 9999 !important;
+}
+
+.table-edit-custom .e-rowcell .select__control {
+  border-radius: 0px;
+  border: 0px;
+
+  &.select__control--is-focused {
+    border: 1px solid !important;
+    border-color: $color-light-blue !important;
+    background-color: $body-bg !important;
+  }
+}
+
+.table-edit-custom .e-rowcell .is-invalid {
+  border-radius: 0px;
+  border: 1px solid !important;
+  border-color: $danger !important;
+}
+
+.table-edit-custom .e-rowcell .form-control:focus {
+  border-radius: 0px;
+  border: 1px solid !important;
+  border-color: $color-light-blue !important;
+  background-color: $body-bg !important;
+}
+
+.table-edit-custom .e-gridheader {
+  display: table-header-group;
+  position: sticky;
+  z-index: 2;
+  border-top: 1px solid #e0e0e0 !important;
+  border-bottom-width: 0px !important;
+  top: -1px;
+}
+
+.table-edit-custom .e-gridheader .e-headercell-div {
+  border-bottom: 1px solid #e0e0e0 !important;
+  height: 100%;
+  padding: 5px 10px;
+  display: flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-items: center;
+}
+
+.table-edit-custom .cell-fixed {
+  position: sticky !important;
+  z-index: 1 !important;
+}
+
+.table-edit-custom .e-rowcell {
+  min-height: 30px !important;
+}
+
+.table-edit-custom .e-rowcell.e-active {
+  background-color: rgb(235, 70, 25, 10%) !important;
+}
+
+.table-edit-custom .e-rowcell.e-active.cell-fixed .e-rowcell-div {
+  background-color: rgb(235, 70, 25, 10%) !important;
+}
+
+.table-edit-custom .e-rowcell.e-active.cell-fixed {
+  background-color: $modal-content-bg !important;
+}
+
+.table-edit-custom .e-rowcell.cell-fixed  {
+  &.fix-right .e-rowcell-div {
+    border-left: 1px solid #e0e0e0 ;
+  }
+  &.fix-left .e-rowcell-div {
+    border-right: 1px solid #e0e0e0 ;
+  }
+  .e-rowcell-div{
+    background-color: $modal-content-bg !important;
+  }
+}
+
+.table-edit-custom .select-group .input-group-text {
+  border-bottom: 0;
+  border-top: 0;
+  border-right: 0;
+  border-radius: 0;
+  padding: 0.3rem 0.4rem;
+  cursor: pointer;
+}
+
+.table-edit-custom .e-headercell.cell-fixed {
+  &.fix-right .e-headercell-div {
+    border-left: 1px solid #e0e0e0 !important;
+  }
+  &.fix-left .e-headercell-div {
+    border-right: 1px solid #e0e0e0 !important;
+  }
+}
+
+.table-edit-custom .e-rowcell .e-rowcell-div {
+  margin: 0;
+  min-height: 34px;
+  vertical-align: middle;
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
+  position: relative;
+  &.is-invalid {
+    border: 1px solid red !important;
+    margin: 2px;
+    min-height: 30px !important;
+    .icon-table {
+      stroke-width: 2;
+      position: absolute;
+      top: 6px;   
+      right: 10px;
+    }
+  }
+}
+
+.table-edit-custom .e-gridheader .e-headercell-div.cell-fixed {
+  border-top: 1px solid #e0e0e0 !important;
+}
+
+.table-edit-custom .e-gridfoot {
+  display: table-header-group;
+  position: sticky;
+  z-index: 2;
+  bottom: -1px;
+}
+
+.table-edit-custom .e-headercell {
+  position: static;
+}
+
+.table-edit-custom .e-numericcontainer .e-active {
+  background-color: rgb(235, 70, 25, 10%) !important;
+  color: #0e6fff !important;
+  border-radius: 5px !important;
+}

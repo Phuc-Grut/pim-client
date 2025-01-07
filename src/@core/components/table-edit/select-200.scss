@@ -1,0 +1,255 @@
+@import "src/@core/scss/base/bootstrap-extended/include"; // Bootstrap includes
+@import "src/@core/scss/base/components/include"; // Components includes
+
+// Import first main menu mixin
+@import "src/@core/scss/base/core/mixins/main-menu-mixin";
+
+// Import variable customize
+@import "../../../assets/scss/variables/variables";
+
+// InValid Select
+.react-select.is-invalid {
+  .width-popup-200__control {
+    border-color: $danger;
+  }
+}
+
+.table-edit-custom .e-rowcell .width-popup-200__control {
+  border-radius: 0px;
+  border: 0px;
+
+  &.width-popup-200__control--is-focused {
+    border: 1px solid !important;
+    border-color: $color-light-blue !important;
+    background-color: $body-bg !important;
+  }
+}
+
+.width-popup-200__control {
+  min-height: 28px !important;
+
+  &.width-popup-200__control--is-focused {
+    border-color: $color-light-blue;
+
+    .width-popup-200__indicator {
+      svg {
+        color: $body-color !important;
+      }
+    }
+  }
+
+  .width-popup-200__input-container {
+    padding: 0;
+    margin: 0;
+  }
+
+  .width-popup-200__placeholder {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .width-popup-200__indicator {
+    padding: 0 3px !important;
+
+    svg {
+      color: #c4c4c4 !important;
+    }
+  }
+  .width-popup-200__multi-value {
+    background-color: $primary;
+    margin: .05rem;
+    padding: 0 0.6rem;
+
+    .width-popup-200__multi-value__label {
+      font-size: .75rem;
+    }
+  }
+}
+
+// Select Control(Input)
+.width-popup-200__control,
+.width-popup-200__control {
+  .width-popup-200__input {
+    color: $body-color !important;
+  }
+
+  &.width-popup-200__control--is-disabled {
+    border-color: $border-color;
+
+    .width-popup-200__indicator-separator {
+      background-color: $border-color;
+    }
+  }
+
+  &.width-popup-200__control--is-focused,
+  &.width-popup-200__control--is-focused {
+    box-shadow: none;
+    border-color: $primary;
+  }
+
+  .width-popup-200__indicator svg {
+    cursor: pointer;
+    color: $body-color;
+  }
+
+  .width-popup-200__indicator-separator {
+    display: none;
+  }
+
+  .width-popup-200__single-value {
+    color: $body-color;
+  }
+
+  .width-popup-200__placeholder {
+    color: $body-color;
+  }
+}
+
+// Select Menu
+.width-popup-200__menu,
+.width-popup-200__menu {
+
+  .width-popup-200__menu-list,
+  .width-popup-200__menu-list {
+
+    .width-popup-200__option,
+    .width-popup-200__option {
+      cursor: pointer;
+
+      &.width-popup-200__option--is-focused {
+        background-color: rgba($color: $primary, $alpha: 0.12);
+        color: $primary;
+      }
+
+      &.width-popup-200__option--is-selected {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+
+  .width-popup-200__menu-list,
+  .width-popup-200__menu-list {
+    .width-popup-200__group {
+      .width-popup-200__group-heading {
+        margin-bottom: 0.5rem;
+        color: $headings-color;
+        font-weight: bolder;
+        font-size: inherit;
+      }
+    }
+  }
+}
+
+// Multi Select
+.width-popup-200__multi-value,
+.width-popup-200__multi-value {
+  color: $white;
+  border-radius: 3px;
+  margin: 0 0.7rem 0 0;
+
+  .width-popup-200__multi-value__label {
+    color: $white;
+    font-size: 0.85rem;
+    border-radius: $border-radius;
+    padding: 0.26rem 0.6rem;
+  }
+
+  .width-popup-200__multi-value__remove {
+    padding-left: 0;
+    padding-right: 0.5rem;
+
+    &:hover {
+      background-color: inherit;
+      color: inherit;
+    }
+
+    svg {
+      height: 0.85rem;
+      width: 0.85rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Select Borderless
+.select-borderless {
+  .width-popup-200__control {
+    border: 0;
+
+    .width-popup-200__indicators {
+      display: none;
+    }
+  }
+}
+
+// Dark Layout
+.dark-layout {
+  .width-popup-200__control {
+    background-color: $theme-dark-input-bg;
+    border-color: $theme-dark-border-color;
+
+    .width-popup-200__indicator svg {
+      fill: $theme-dark-body-color;
+    }
+
+    .width-popup-200__input {
+      color: $theme-dark-body-color !important;
+    }
+
+    .width-popup-200__indicator span,
+    .width-popup-200__single-value {
+      color: $theme-dark-body-color;
+    }
+
+    .width-popup-200__multi-value {
+      background-color: rgba($color: $primary, $alpha: 0.12);
+
+      .width-popup-200__multi-value__label {
+        color: $primary;
+      }
+    }
+
+    .width-popup-200__multi-value__remove {
+      svg {
+        fill: $primary;
+      }
+
+      &:hover {
+        background-color: transparent !important;
+      }
+    }
+
+    .width-popup-200__placeholder {
+      color: $theme-dark-input-placeholder-color;
+    }
+
+    &.width-popup-200__control--is-disabled {
+      opacity: 0.5;
+    }
+  }
+
+  .width-popup-200__menu-list,
+  .width-popup-200__menu-list {
+    .width-popup-200__group {
+      .width-popup-200__group-heading {
+        color: $theme-dark-headings-color;
+      }
+    }
+  }
+
+  .width-popup-200__menu {
+    background-color: $theme-dark-card-bg;
+  }
+}
+
+html[dir='rtl'] {
+  .width-popup-200__control {
+    .width-popup-200__loading-indicator {
+      flex-direction: row-reverse;
+    }
+  }
+}
